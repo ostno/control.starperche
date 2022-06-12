@@ -1,38 +1,282 @@
-.App {
-  text-align: center;
-}
+ .recap_inside {
+   width: 100%;
+   display: flex;
+   background: transparent;
+ }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+ .logo_wrapper {
+   width: 100%;
+   text-align: left;
+   object-fit: cover;
+   z-index: 13;
+   position: absolute;
+   height: 100%;
+   top: 0px;
+   left: 0px;
+ }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+ .event_name {
+   font-weight: 800;
+   color: var(--primary);
+   padding-bottom: 10px;
+   display: inline-block;
+   font-size: 1.3em;
+ }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+ .logo_img {
+   width: 40%;
+   display: inline-block;
+   margin: auto;
+   padding: 0px;
+ }
 
-.App-link {
-  color: #61dafb;
-}
+ .right_frame {
+   z-index: 13;
+   width: 100%;
+   text-align: center;
+   padding-bottom: 5px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+   background: transparent;
+ }
+
+ .name_place {
+   display: flex;
+ }
+
+ .hauteur {
+   display: inline-block;
+   flex-grow: 1;
+ }
+
+ .height_inside {
+   /* background-image: linear-gradient(315deg, rgba(255, 255, 255, 0.8) 0%, #d7e1ec 74%); */
+   background: rgb(221, 223, 236);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: auto;
+   margin-top: 5px;
+   padding-left: 10px;
+   padding-right: 10px;
+   color: rgba(28, 34, 70, 1);
+   font-weight: 700;
+   font-size: 1.4em;
+ }
+
+ .current_bar {
+   background-color: rgb(255, 255, 255);
+ }
+
+ .cleared {
+   background-color: rgb(59, 133, 230);
+ }
+
+ .name {
+   width: 75%;
+   text-align: center;
+ }
+
+ .name_inside {
+   width: 100%;
+   height: 50px;
+   /* background-image: linear-gradient(315deg, rgba(255, 255, 255, 0.8) 0%, #d7e1ec 74%); */
+   background: var(--background);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: auto;
+   color: rgba(28, 34, 70, 1);
+   font-weight: 700;
+   font-size: 1.6em;
+ }
+
+ .rank {
+   text-align: center;
+   width: 10%;
+ }
+
+ .rank_inside {
+   width: 50px;
+   height: 50px;
+   background: var(--background);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: auto;
+   color: white;
+   background: linear-gradient(90deg, rgba(28, 34, 70, 0.5) 10%, rgba(28, 34, 70, 0.9) 100%);
+   font-weight: 800;
+   font-size: 1.8em;
+   color: var(--primary);
+ }
+
+ .special_out {
+   width: 10%;
+   display: flex;
+   margin-left: 6%;
+ }
+
+ .special {
+   text-align: center;
+ }
+
+ .special_inside {
+   padding: 5px;
+   background: var(--background);
+   justify-content: center;
+   align-items: center;
+   margin: auto;
+   display: block;
+   background: linear-gradient(90deg, rgba(28, 34, 70, 0.5) 10%, rgba(28, 34, 70, 0.9) 100%);
+   font-weight: 800;
+   color: white;
+   font-size: 0.8em;
+ }
+
+ .first_place {
+   background: radial-gradient(circle, rgb(255, 220, 24) 10%, rgb(212, 165, 55) 100%);
+   color: rgba(28, 34, 70, 1);
+ }
+
+ .second_place {
+   background: radial-gradient(circle, rgb(226, 219, 219) 10%, rgb(170, 169, 173) 100%);
+   color: rgba(28, 34, 70, 1);
+ }
+
+ .third_place {
+   background: radial-gradient(circle, rgb(209, 158, 106) 10%, rgb(205, 127, 50) 100%);
+   color: rgba(28, 34, 70, 1);
+ }
+
+ .cleared_height {
+   width: 18%;
+   text-align: center;
+   z-index: 13;
+ }
+
+ .cleared_height_background {
+   margin-left: -10px;
+ }
+
+ .cleared_height_inside {
+   height: 50px;
+   /* background-image: linear-gradient(315deg, rgba(255, 255, 255, 0.8) 0%, #d7e1ec 74%); */
+   background: var(--background);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: auto;
+   color: rgba(28, 34, 70, 1);
+   font-weight: 700;
+   font-size: 1.6em;
+ }
+
+
+ :root {
+   --primary: #172d59;
+   --secondary: #e51c22;
+   --darkbackground: black;
+   --background: linear-gradient(90deg, rgb(224, 225, 235) 13%, rgb(213, 215, 226) 56%, rgb(237, 239, 245) 100%);
+ }
+
+ body {
+   background-color: var(--darkbackground);
+   cursor: pointer;
+   font-family: Arial, Helvetica, sans-serif;
+   color: black;
+   margin: auto;
+   width: 100%;
+   height: 100%;
+   /* background: url("test.png") no-repeat center center fixed; */
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+ }
+
+ .single .logo {
+   width: 22%;
+   position: absolute;
+   bottom: 5%;
+   left: 2%;
+ }
+
+ .single .club {
+   width: 35%;
+   text-align: center;
+   z-index: 13;
+   white-space: nowrap;
+   padding-top: 10px;
+ }
+
+ .single .nation {
+   width: 35%;
+   text-align: center;
+   z-index: 13;
+ }
+
+ .single .nation_bg {
+   padding-bottom: 5px;
+ }
+
+ .single .flag {
+   width: 40px;
+   height: 60px;
+ }
+
+ .single .nation_inside {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: auto;
+   color: #e4e4e4;
+   background: linear-gradient(90deg, rgba(28, 34, 70, 0.5) 10%, rgba(28, 34, 70, 0.9) 100%);
+   height: 50px;
+   font-weight: 800;
+   font-size: 1.5em;
+ }
+
+ .single .club_bg {
+   background: transparent;
+   padding-bottom: 5px;
+ }
+
+ .single .flag {
+   width: 40px;
+   height: 60px;
+ }
+
+ .single .club_inside {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: auto;
+   margin-top: -10px;
+   color: var(--primary);
+   font-style: italic;
+   color: #e4e4e4;
+   background: linear-gradient(90deg, rgba(28, 34, 70, 0.5) 10%, rgba(28, 34, 70, 0.9) 100%);
+   height: 50px;
+   font-weight: 800;
+   font-size: 1.5em;
+ }
+
+ .recap {
+   position: absolute;
+   top: 77%;
+   left: 25%;
+   width: 50%;
+   height: 110px;
+   background-color: rgba(255, 255, 255, 0.8);
+ }
+
+ .logo-urban img {
+   position: absolute;
+   top: 50px;
+   right: 50px;
+   width: 15%;
+ }
+
+ .concours {
+   display: flex;
+ }
